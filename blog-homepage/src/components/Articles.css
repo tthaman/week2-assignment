@@ -1,0 +1,14 @@
+.article {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dee2e6;
+}
+
+.authorInfo {
+  font-size: 12px;
+  line-height: 1.4;
+  padding-left: 10px;
+  text-rendering: auto;
+  text-align: left;
+  margin: unset;
+}
