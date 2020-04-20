@@ -10,19 +10,20 @@ import AuthorInfo from "../AuthorInfo/AuthorInfo";
 import PropTypes from 'prop-types';
 
 const MissedArticles = props => {
-  const {image, hasAudioAvailable, memberPreview, title, description} = {...props.data};
+  const {image, hasAudioAvailable, memberPreview, title, description, link} = {...props.data};
 
   return (
 
     <Container className='article'>
       <Row>
         <Col>
-          <img
-            src={image}
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <img src={image}
             alt="Generic placeholder"
             height={200}
-            width={325}
-          />
+            width={325}/>
+          </a>
+
         </Col>
       </Row>
       <Row>

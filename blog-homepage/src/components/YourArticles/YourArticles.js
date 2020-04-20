@@ -7,11 +7,12 @@ import AuthorInfo from '../AuthorInfo/AuthorInfo';
 import PropTypes from 'prop-types';
 
 const YourArticles = props => {
-  const {image, hasAudioAvailable, memberPreview, title, description } = {...props.data};
+  const {image, hasAudioAvailable, memberPreview, title, description, link } = {...props.data};
 
   return (
 
       <Media className='article'>
+        <a href={link} target="_blank" rel="noopener noreferrer">
         <img
           width='170px'
           height='225px'
@@ -19,6 +20,7 @@ const YourArticles = props => {
           src={image}
           alt="Generic placeholder"
         />
+        </a>
 
         <div>
           {hasAudioAvailable ?
