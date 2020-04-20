@@ -19,22 +19,24 @@ const YourArticles = props => {
           src={image}
           alt="Generic placeholder"
         />
-        <Media.Body>
+
+        <div>
           {hasAudioAvailable ?
-            <p style={{textAlign: 'left', fontSize:'12px'}}>
+            <p style={{display:"inline-block", marginRight:"20px", textAlign: 'left', fontSize:'12px'}}>
               <FontAwesomeIcon icon={faVolumeUp} fa-sm='true' fontSize='0.5rem'/>
               Audio available
             </p>
-            : <p>  </p>}
+            : <p> </p>}
           {memberPreview ?
-            <p><FontAwesomeIcon icon={faStar}/>Member Preview</p>
+            <p style={{  display:"inline-block", marginLeft:"20px", textAlign: 'right', fontSize:'12px'}}>
+              <FontAwesomeIcon icon={faStar}/>Member Preview</p>
             : <p> </p>}
           <h5>{title}</h5>
-          <p style={{fontSize:14 + 'px'}}>{description}</p>
+          <p>{description}</p>
           <AuthorInfo postedDate={props.data.postedDate}
                       author={props.data.author}
                       minutesToRead={props.data.minutesToRead}/>
-        </Media.Body>
+        </div>
       </Media>
   )
 

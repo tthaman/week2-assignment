@@ -11,16 +11,21 @@ const AuthorInfo = props => {
   const {postedDate, author, minutesToRead} = {...props};
   const image = author.image;
   const name = author.name;
+  const isMediumMember = author.isMediumMember;
   const parts = postedDate.toString().split(' ')
   const month = parts[1];
   const day = parts[2];
+
+  const imgStyle = isMediumMember ? {
+    border: "5px solid green",
+  }: {};
 
   return (
 
     <Container>
       <Row>
         <Col>
-            <img alt='author' src={image} height={50} width={50}/>
+            <img alt='author' src={image} height={50} width={50} style={imgStyle}/>
         </Col>
         <Col xs={6}>
           <p className='authorInfo'>{name}</p>

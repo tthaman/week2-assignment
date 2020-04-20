@@ -26,7 +26,7 @@ const MissedArticles = props => {
         </Col>
       </Row>
       <Row>
-        <div>
+        <div style={{display:"inline-block"}}>
           {hasAudioAvailable ?
             <p style={{textAlign: 'left', fontSize:'12px'}}>
               <FontAwesomeIcon icon={faVolumeUp} fa-sm='true' fontSize='0.5rem'/>
@@ -34,7 +34,8 @@ const MissedArticles = props => {
             </p>
             : <p> </p>}
           {memberPreview ?
-            <p><FontAwesomeIcon icon={faStar}/>Member Preview</p>
+            <p style={{textAlign: 'right', fontSize:'12px'}}>
+            <FontAwesomeIcon icon={faStar}/>Member Preview</p>
             : <p> </p>}
           <h5>{title}</h5>
           <p>{description}</p>
